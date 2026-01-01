@@ -63,7 +63,11 @@ button {
 #envelope {
   font-size: 90px;
   cursor: pointer;
-  animation: float 1.4s infinite ease-in-out;
+  transition: transform 0.8s ease, rotate 0.8s ease;
+}
+
+#envelope.open {
+  transform: rotateX(180deg) translateY(-20px);
 }
 
 .photo {
@@ -81,19 +85,3 @@ button {
   font-size: 10px;
   line-height: 1.8;
 }
-
-@keyframes float {
-  50% { transform: translateY(-12px); }
-}
-/* Animasi buka amplop */
-#envelope {
-  font-size: 90px;
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.8s ease, rotate 0.8s ease;
-}
-
-#envelope.open {
-  transform: rotateX(180deg) translateY(-20px); /* efek buka */
-}
-

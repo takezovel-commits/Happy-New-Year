@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- PASSWORD SCREEN -->
+<!-- PASSWORD -->
 <div id="screen-password" class="screen">
   <p class="hint">👉 Masukin passwordnya bre</p>
   <input id="password" type="text" class="game-input" placeholder="Type here">
@@ -16,23 +16,22 @@
   <p id="error"></p>
 </div>
 
-<!-- NAME SCREEN -->
+<!-- NAME -->
 <div id="screen-name" class="screen hidden">
   <p class="hint">✍️ Enter your name</p>
   <input id="username" type="text" class="game-input" placeholder="Your name">
   <button id="nameBtn">CONTINUE</button>
 </div>
 
-<!-- ENVELOPE SCREEN -->
+<!-- ENVELOPE -->
 <div id="screen-envelope" class="screen hidden">
   <h1>📨 You got a letter</h1>
   <div id="envelope">✉️</div>
 </div>
 
-<!-- LETTER SCREEN -->
+<!-- LETTER -->
 <div id="screen-letter" class="screen hidden">
-  <!-- placeholder image, JS yang bakal ganti sesuai user -->
-  <img src="img/jordan.png" class="photo">
+  <img id="letter-photo" class="photo">
   <div class="paper">
     <p id="pesan"></p>
   </div>
