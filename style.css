@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', monospace;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1b1f3b, #000);
+  color: white;
+  text-align: center;
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.hint {
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+.game-input {
+  width: 240px;
+  padding: 14px;
+  font-size: 12px;
+  background: black;
+  color: #00ffcc;
+  border: 2px solid #5f7cff;
+  outline: none;
+  text-align: center;
+  caret-color: #00ffcc;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { caret-color: transparent; }
+}
+
+button {
+  padding: 12px 22px;
+  font-size: 12px;
+  background: #5f7cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+#error {
+  font-size: 10px;
+  color: red;
+}
+
+#envelope {
+  font-size: 90px;
+  cursor: pointer;
+  animation: float 1.4s infinite ease-in-out;
+}
+
+.photo {
+  width: 160px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.paper {
+  background: #f5f0e6;
+  color: #222;
+  padding: 18px;
+  max-width: 320px;
+  border-radius: 8px;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+@keyframes float {
+  50% { transform: translateY(-12px); }
+}
+/* Animasi buka amplop */
+#envelope {
+  font-size: 90px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.8s ease, rotate 0.8s ease;
+}
+
+#envelope.open {
+  transform: rotateX(180deg) translateY(-20px); /* efek buka */
+}
+
